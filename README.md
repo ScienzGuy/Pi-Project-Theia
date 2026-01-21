@@ -75,7 +75,8 @@ plugin "docker" {
     }
   }
 }
-🛠️ Troubleshooting & Lessons Learned
+
+##🛠️ Troubleshooting & Lessons Learned
 1. exec format error (Architecture Mismatch)
 Symptoms: Task restarts indefinitely; logs show exec format error. Cause: Attempting to run an x86_64 image on ARM64 hardware. Fix: Explicitly use the arm64v8 tag in the job file.
 
@@ -91,7 +92,7 @@ Symptoms: i/o timeout during image pulls. Cause: High CPU load interfering with 
 4. Thermal & Power Constraints
 Symptoms: Clock speed throttles to 1.5GHz or nodes reboot. Cause: CPU > 80°C or PoE budget exceeded (>63W total). Fix: Monitor vitals with vcgencmd measure_temp and adjust resources in the Nomad job file if necessary.
 
-📊 Management
+##📊 Management
 The cluster is managed remotely via the BOINC Manager (Advanced View).
 
 Port: 31416
