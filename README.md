@@ -18,13 +18,40 @@ The cluster, nicknamed **"Bramble,"** is designed for maximum compute density wi
 * **Storage:**
     * **Persistence:** Host-volume mapping at `/opt/boinc_data`.
 
-
-
 ## 🚀 Software Stack
 * **OS:** Raspberry Pi OS (64-bit)
 * **Orchestration:** [HashiCorp Nomad](https://www.nomadproject.io/)
 * **Containerization:** [Docker](https://www.docker.com/)
 * **Workload:** [BOINC](https://boinc.berkeley.edu/)
+
+## 🛠 Hardware Configuration: The 2026 "Wide & Cool" Baseline
+
+As of January 2026, the cluster has been migrated from an unstable 2.6GHz overclock to a stabilized, underclocked profile to ensure long-term reliability for continuous BOINC throughput.
+
+| Setting | Value | Impact |
+| :--- | :--- | :--- |
+| **CPU Clock Speed** | **2.2GHz** (2200 MHz) | Reduced from 2.6GHz to prevent thermal throttling and kernel panics. |
+| **Voltage Offset** | **-50mV** (Undervolted) | Lowered power draw and heat signature while maintaining 2.2GHz stability. |
+| **Active Cooling** | UCTronics PoE HAT | Managed via PWM; target temp maintained at **~70-73°C** under 100% load. |
+
+### 🚀 Software & Orchestration Updates
+
+#### **Self-Healing "Janitor" Logic**
+To combat stale lockfiles during power cycles (a common issue with Pi 5 SSD mounts), the Nomad job now includes a `pre_start` janitor task:
+
+```hcl
+# Excerpt from boinc.nomad
+task "janitor" {
+  driver = "raw_exec"
+  lifecycle {
+    hook    = "pre_start"
+    sidecar = false
+  }
+  config {
+    command = "/usr/bin/sudo"
+    args    = ["/usr/bin/rm", "-f", "/opt/boinc_data/lockfile"]
+  }
+}
 
 ## 🔧 Core Configuration
 
