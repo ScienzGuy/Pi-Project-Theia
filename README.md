@@ -2,7 +2,7 @@
 ## High-Efficiency BOINC Implementation on Underclocked Pi 5
 
 ### 🌌 Overview
-Theia is a dedicated two-node sub-cluster designed for high-throughput, 24/7 volunteer computing via the **Berkeley Open Infrastructure for Network Computing (BOINC)**. The cluster is comprised of two Raspberry Pi 5 nodes—**Ganymede** and **Callisto**—operating in a unified bare-metal environment.
+Theia is a dedicated two-node sub-cluster designed for high-throughput, 24/7 volunteer computing via the **Berkeley Open Infrastructure for Network Computing (BOINC)**. The cluster is comprised of two Raspberry Pi 5 nodes—Ganymede and Callisto—operating in a unified bare-metal environment.
 
 By moving away from containerization, Theia maximizes computational efficiency and eliminates the security abstractions that previously hindered specialized scientific workloads. The cluster is engineered for "Thermal Sustainability," prioritizing long-term hardware health and consistent credit generation over raw burst speed.
 
