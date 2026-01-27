@@ -1,4 +1,4 @@
-# Theia: High-Performance Bare-Metal BOINC
+# Theia: High-Performance Pi Cluster for BOINC
 ## Optimized Distributed Computing on Raspberry Pi 5
 
 ### Overview
