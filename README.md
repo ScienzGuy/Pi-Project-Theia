@@ -6,6 +6,12 @@ Theia is a dedicated two-node sub-cluster designed for high-throughput, 24/7 vol
 
 By moving away from containerization, Theia maximizes computational efficiency and eliminates the security abstractions that previously hindered specialized scientific workloads. The cluster is engineered for "Thermal Sustainability," prioritizing long-term hardware health and consistent credit generation over raw burst speed.
 
+### Why This Matters
+Beyond its contribution to global research, Theia serves as a testbed for:
+  1. Thermal Management: Monitoring heat dissipation in multi-node, high-load scenarios.
+  2. Resource Contention: Managing CPU cycles and memory bandwidth across concurrent scientific tasks.
+  3. Network Throughput: Handling large-scale data ingress and egress for complex work units.
+
 ### Cluster Architecture
 Theia is architected for maximum computational density and thermal efficiency:
   1. Resource Management: Utilizing the BOINC client across a distributed Linux environment to manage work units and credit tracking.
