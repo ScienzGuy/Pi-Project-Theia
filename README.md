@@ -6,6 +6,15 @@ Theia is a dedicated two-node sub-cluster designed for high-throughput, 24/7 vol
 
 By moving away from containerization, Theia maximizes computational efficiency and eliminates the security abstractions that previously hindered specialized scientific workloads. The cluster is engineered for "Thermal Sustainability," prioritizing long-term hardware health and consistent credit generation over raw burst speed.
 
+### Project Mission
+The goal of Theia is to demonstrate the efficacy of low-power, high-parallelism architectures in solving "Big Data" problems. By utilizing a coordinated array of processors, the cluster provides a continuous stream of throughput for high-impact scientific research.
+
+### Core Projects
+Theia currently allocates computational resources to the following initiatives:
+  1. Einstein@Home: Searching for weak astrophysical signals from spinning neutron stars (pulsars) using data from the LIGO gravitational wave detectors, the Arecibo Observatory, and the Fermi Gamma-ray Space Telescope.
+  2. Asteroids@home: Utilizing photometric data of asteroids to derive their physical properties, such as shape and spin axis, to better understand the formation and evolution of the solar system.
+  3. PrimeGrid: Contributing to large-scale mathematical research by searching for various forms of record-breaking prime numbers through distributed volunteer computing.
+
 ### Why This Matters
 Beyond its contribution to global research, Theia serves as a testbed for:
   1. Thermal Management: Monitoring heat dissipation in multi-node, high-load scenarios.
