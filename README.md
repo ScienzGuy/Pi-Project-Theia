@@ -1,5 +1,8 @@
-# Theia: Distributed Volunteer Scientific Computing Pi Cluster
+# Theia: Distributed Volunteer Scientific Computing Pi Cluster (Retired)
 ## High-Efficiency BOINC Implementation on Underclocked Pi 5
+
+### Status Update
+This project has been retired to repurpose these systems for use in a new proof-of-concept 4-node Llama.cpp distributed AI cluster.
 
 ### Overview
 Theia is a dedicated two-node sub-cluster designed for high-throughput, 24/7 volunteer computing via the **Berkeley Open Infrastructure for Network Computing (BOINC)**. The cluster is comprised of two Raspberry Pi 5 nodes—Ganymede and Callisto—operating in a unified bare-metal environment.
